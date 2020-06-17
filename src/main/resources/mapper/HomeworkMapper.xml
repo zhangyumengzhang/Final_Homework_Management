@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.mapper.HomeworkMapper">
+
+    <insert id="save" parameterType="Homework">
+        insert into homework (homework_id,homework_title) value (#{homework_id}, #{homework_title})
+    </insert>
+
+    <select id="findById" resultType="com.example.demo.model.Homework">
+      select * from homework where homework_id = #{homeworkId}
+    </select>
+
+    <select id="findAll" resultType="com.example.demo.model.Homework">
+        select * from homework
+    </select>
+
+</mapper>

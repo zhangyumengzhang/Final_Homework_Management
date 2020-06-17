@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.mapper.StudentMapper">
+
+    <insert id="save" parameterType="Student">
+        insert into student (student_id,student_name,password) value (#{student_id}, #{student_name}, #{password})
+    </insert>
+
+    <select id="findAll" resultType="com.example.demo.model.Student">
+        select * from student
+    </select>
+
+    <select id="findById" resultType="com.example.demo.model.Student">
+        select * from student where student_id= #{student_id}
+    </select>
+</mapper>
