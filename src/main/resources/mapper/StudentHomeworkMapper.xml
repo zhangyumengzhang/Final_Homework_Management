@@ -16,4 +16,8 @@
     <select id="findAllById" resultType="com.example.demo.model.StudentHomework">
        select * from student_homework where homework_id = #{id}
     </select>
+
+    <update id="update" parameterType="com.example.demo.model.StudentHomework">
+       update student_homework set homework_content=(#{homework_content}),update_time=(#{update_time}) where student_id=(#{student_id}) and homework_id=(#{homework_id})
+    </update>
 </mapper>

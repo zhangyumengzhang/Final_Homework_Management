@@ -72,14 +72,17 @@ public class StudentHomeworkService {
                 }
             }
             //如果学生或者不存在或者作业不存在均返回FALSE
-            if (isstudent == false || ishomework == false||isshomework==true) {
+            if (isstudent == false || ishomework == false) {
                 return false;
-            }else{
+            }else if(!isshomework){
                 studenthomeworkMapper.save(sh);
                 System.out.println(sh.toString());
                 return true;
+            }else{
+                studenthomeworkMapper.update(sh);
+                System.out.println(sh.toString());
+                return true;
             }
-
         }catch (Exception e){
             e.printStackTrace();
             return false;

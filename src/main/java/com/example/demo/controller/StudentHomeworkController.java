@@ -97,7 +97,6 @@ public class StudentHomeworkController {
         return mav;
     }
 
-
     @RequestMapping("submitH")
     public ModelAndView submitHomework(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         ModelAndView mav;

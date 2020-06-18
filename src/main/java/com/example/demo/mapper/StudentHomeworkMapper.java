@@ -19,4 +19,5 @@ public interface StudentHomeworkMapper {
 
     List<StudentHomework> findAllById(Integer id);
 
+    void update(StudentHomework sh);
 }
